@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  background: #111;
+  overflow: hidden;
+  position: relative;
+  font-family: 'Aclonica', sans-serif;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  text-align: center;
+  font-size: 2.2rem;
+  color: white;
+  z-index: 1;
+  letter-spacing: 2px;
+}
+
+
+
+model-viewer {
+  width: 100%;
+  height: 100vh;
+}
