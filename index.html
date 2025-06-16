@@ -1,76 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Car Drift Animation</title>
+    <title>Test Model</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <style>
-      body {
-        margin: 0;
-        background: #111;
-        overflow: hidden;
-      }
-    </style>
   </head>
-  <body>
+  <body style="margin: 0; background: #111;">
     <model-viewer
-      id="car"
       src="porsche911.glb"
       camera-controls
       auto-rotate
-      disable-zoom
       style="width: 100%; height: 100vh"
     ></model-viewer>
-
-    <script>
-      const car = document.getElementById("car");
-
-      let drifting = false;
-
-      function driftCar() {
-        if (drifting) return;
-        drifting = true;
-
-        let start = null;
-        let angle = 0;
-        let offset = 0;
-        const duration = 2000; // total drift duration in ms
-
-        function animateDrift(timestamp) {
-          if (!start) start = timestamp;
-          const elapsed = timestamp - start;
-
-          // Drift phase (first half)
-          if (elapsed < duration / 2) {
-            angle = Math.sin((elapsed / duration) * Math.PI) * 15; // yaw angle
-            offset = Math.sin((elapsed / duration) * Math.PI) * 0.3; // sideways movement
-          } 
-          // Return phase (second half)
-          else if (elapsed < duration) {
-            angle = Math.sin(((duration - elapsed) / duration) * Math.PI) * 15;
-            offset = Math.sin(((duration - elapsed) / duration) * Math.PI) * 0.3;
-          } 
-          else {
-            // Reset to original
-            car.yaw = 0;
-            car.translation = "0 0 0";
-            drifting = false;
-            return;
-          }
-
-          // Apply transform
-          car.cameraOrbit = `${angle}deg 75deg 2.5m`;
-          car.translation = `${offset} 0 0`;
-
-          requestAnimationFrame(animateDrift);
-        }
-
-        requestAnimationFrame(animateDrift);
-      }
-
-      // Wait for the model to load then drift after a delay
-      car.addEventListener("load", () => {
-        setTimeout(driftCar, 1000);
-      });
-    </script>
   </body>
 </html>
+
+
