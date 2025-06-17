@@ -1,17 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Test Model</title>
+    <title>Car Models</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="overlay-text">PORSCHE 911</div>
-    <model-viewer
-      src="porsche911.glb"
-      camera-controls
-      auto-rotate
-    ></model-viewer>
+    <section class="model-section">
+      <div class="overlay-text">PORSCHE 911 </div>
+      <model-viewer
+        src="porsche911.glb"
+        camera-controls
+        auto-rotate
+      ></model-viewer>
+    </section>
+
+    <section class="model-section" id="porsche-911-carrera">
+      <div class="overlay-text">PORSCHE 911 CARRERA</div>
+      <model-viewer
+        src="porsche911carrera.glb"
+        camera-controls
+        auto-rotate
+      ></model-viewer>
+    </section>
+    <section class="model-section" id="porsche-956">
+      <div class="overlay-text">PORSCHE 956</div>
+      <model-viewer
+        src="porsche956.glb"
+        camera-controls
+        auto-rotate
+      ></model-viewer>
+      </section>
+      <section class="model-section" id="porsche-911-gt3-rs">
+      <div class="overlay-text">PORSCHE 911 GT3 RS</div>
+      <model-viewer
+        src="porsche_911_gt3_rs.glb"
+        camera-controls
+        auto-rotate
+      ></model-viewer>
+      </section>
+      
+    <section class="model-section" id="porsche-macan">
+      <div class="overlay-text">PORSCHE MACAN</div>
+      <model-viewer
+        src="porsche_macan.glb"
+        camera-controls
+        auto-rotate
+      ></model-viewer>
+    </section>
   </body>
 </html>
+ 
