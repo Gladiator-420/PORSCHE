@@ -1,25 +1,48 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background: #111;
-  overflow: hidden;
-  position: relative;
   font-family: 'Aclonica', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.model-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .overlay-text {
   position: absolute;
-  top: 20%;
+  top: 8%;
   width: 100%;
   text-align: center;
-  font-size: 2.2rem;
-  color: white;
+  font-size: 2.5rem;
   z-index: 1;
   letter-spacing: 2px;
+  font-weight: bold;
+  background: linear-gradient(90deg, rgb(155, 155, 155),rgb(74, 74, 74),rgb(154, 154, 154));
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: racingColors 5s linear infinite;
 }
 
+@keyframes racingColors {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
 
 
 model-viewer {
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
