@@ -9,8 +9,9 @@ Welcome to the **interactive Porsche showroom** – where 3D meets sleek design.
 Built as part of my **UI/UX skill-building journey** on [Framer](https://getsetgooo.framer.website), this project showcases multiple Porsche models in glorious real-time 3D!
 
 ### 🔗 **Live Preview**  
-🖱️ Tap, Spin & Zoom → [getsetgooo.framer.website](https://getsetgooo.framer.website)  
-
+-🖱️ Tap, Spin & Zoom → [getsetgooo.framer.website](https://getsetgooo.framer.website)  
+- 🏎️ **Direct 3D Model Viewer** (skip straight to models):  
+  👉 [https://porsche-tan.vercel.app](https://porsche-tan.vercel.app)
 ---
 
 ## 📦 Components in This Project:
